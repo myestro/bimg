@@ -47,6 +47,10 @@
 
 #define IQA_INLINE __inline
 
+#if defined(_WIN32)
+	#undef INFINITY
+#endif
+
 #ifndef INFINITY
     #define INFINITY (float)HUGE_VAL /**< Defined in C99 (Windows is C89) */
 #endif /*INFINITY*/
